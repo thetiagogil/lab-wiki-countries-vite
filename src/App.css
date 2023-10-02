@@ -2,3 +2,71 @@
   margin: 0 auto;
   text-align: center;
 }
+
+li {
+  list-style-type: none;
+}
+
+.homePage {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homePageCountryBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  width: 600px;
+  margin: 5px;
+  padding: 15px;
+  box-shadow: 1px 1px 5px lightgray;
+}
+
+.homePageCountryBox p {
+  margin: 0;
+  color: black;
+}
+
+.smallImg {
+  height: 15px;
+  padding-right: 10px;
+}
+
+.countryDetailsPage {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.countryDetailsBox {
+  margin-top: 50px;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px lightgray;
+  width: 800px;
+  padding: 30px;
+}
+
+.countryDetailsBox img {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.countryDetailsBox section {
+  margin: 20px;
+}
+
+.borders {
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px lightgray;
+}
+
+.bigImg {
+  height: 60px;
+}

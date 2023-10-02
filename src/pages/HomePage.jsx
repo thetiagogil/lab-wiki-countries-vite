@@ -25,22 +25,29 @@ function HomePage() {
   return isLoading ? (
     <p>Loading...</p>
   ) : (
-    <>
-      <h1>All of the countries</h1>
-      {countries.map((country) => {
-        return (
-          <div key={country._id}>
-            <Link to={`/${country.alpha3Code}`}>
-              <img
-                src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`}
-                style={{ height: 30 }}
-              />
-              <p>{country.name.official}</p>
-            </Link>
-          </div>
-        );
-      })}
-    </>
+    <div>
+      <div className="homePage">
+        <h3>COUNTRIES LIST</h3>
+        {countries.map((country) => {
+          return (
+            <div key={country._id}>
+              <Link
+                to={`/${country.alpha3Code}`}
+                style={{ textDecoration: "none" }}
+              >
+                <div className="homePageCountryBox">
+                  <img
+                    src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`}
+                    className="smallImg"
+                  />
+                  <p>{country.name.official}</p>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 

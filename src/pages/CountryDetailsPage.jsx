@@ -27,29 +27,37 @@ function CountryDetails() {
   return isLoading ? (
     <p>Loading...</p>
   ) : (
-    <>
-      <h1>Country Details</h1>
-      <img
-        src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`}
-        style={{ height: 30 }}
-      />
-      <h3>{country.name.official}</h3>
-      <section>
-        <p>Capital: {country.capital}</p>
-        <p>Area: {country.area}</p>
-        <div>
-          {country.borders.map((border) => {
-            return (
-              <div key={border}>
-                <Link to={`/${border}`}>
-                  <p>{border}</p>
-                </Link>
-              </div>
-            );
-          })}
+    <div>
+      <div className="countryDetailsPage">
+        <h3>COUNTRY DETAILS</h3>
+
+        <div className="countryDetailsBox">
+          <h1>{country.name.official}</h1>
+
+          <img
+            src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`}
+            className="bigImg"
+          />
+
+          <section>
+            <p>Capital: {country.capital}</p>
+            <p>Area: {country.area} km²</p>
+            <ul>
+              <p>Borders</p>
+              {country.borders.map((border) => {
+                return (
+                  <div key={border}>
+                    <Link to={`/${border}`}>
+                      <li>{border}</li>
+                    </Link>
+                  </div>
+                );
+              })}
+            </ul>
+          </section>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }
 
